@@ -26,7 +26,7 @@ public class OrderController {
         try {
             return orderRepository.find(id);
         } catch (OrderNotFoundException exception) {
-            logger.warn("Failed to find order " + id);
+            logger.info("Failed to find order " + id);
             return null;
         }
     }

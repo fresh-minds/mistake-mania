@@ -1,0 +1,3 @@
+# Mistake Mania
+
+A simple Spring Boot app that could use some improvements...

@@ -6,7 +6,9 @@ import nl.freshminds.repository.OrderRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class OrderController {
@@ -15,11 +17,6 @@ public class OrderController {
 
     @Autowired
     public OrderRepository orderRepository;
-
-    @PostMapping("/post/save-new-order")
-    public long saveOrder(@RequestBody Order order) {
-        return orderRepository.save(order);
-    }
 
     @GetMapping("/get/find-order-by-id")
     public Order findOrderById(@RequestParam(value = "id") long id) {

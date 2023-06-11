@@ -7,10 +7,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class OrderRepository {
 
-    public long save(Order order) {
-        throw new UnsupportedOperationException("This is just a dummy");
-    }
-
     public Order find(long id) {
         throw new UnsupportedOperationException("This is just a dummy");
     }
